@@ -8,8 +8,19 @@
 <body>
 <h1>My Super Fancy Spa</h1>
 <div id = "clientProfile">
+    <h2>My Profile</h2>
+    <p th:text="${name}"></p>
+    <p th:text="${skintype}"></p>
+    <p th:text="${manipedi}"></p>
 </div>
+<h2>Menu of Available Services</h2>
+<h3>Facial Treatments</h3>
 <div id = "servicesMenu">
+    <ol>
+    <th:block th:each="appropriate : ${appropriateFacials}">
+        <li th:text="${appropriate}"></li>
+    </th:block></ol>
 </div>
+<div th:replace="fragments :: servicesMenu"></div>
 </body>
 </html>
