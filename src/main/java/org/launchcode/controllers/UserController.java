@@ -23,6 +23,7 @@ public class UserController {
 // add form submission handling code here
         if(newuser.getPassword().equals(verify)) {
             UserData.add(newuser);
+            model.addAttribute("users", UserData.getAll());
             return "user/index";
         }
         else {

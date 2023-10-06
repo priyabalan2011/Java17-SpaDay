@@ -2,7 +2,7 @@ package org.launchcode.models;
 
 public class User {
 
-    private final int id;
+    private int id;
     private static int nextId=1;
     private String username;
     private String email;
@@ -43,7 +43,5 @@ public class User {
     public int getId() {
         return id;
     }
-//    public int getId() {
-//        return id;
-//    }
+
 }
